@@ -1,0 +1,61 @@
+---
+import PythonIcon from './icons/Python.astro'
+import TensorFLowIcon from './icons/TensorFlow.astro'
+import CameraIcon from './icons/Camera.astro'
+
+const TAGS = {
+    PYTHON: {
+        name: "Python",
+        class: "bg-black text-white",
+        icon: PythonIcon,
+    },
+    TENSORFLOW: {
+        name: "TensorFLow",
+        class: "bg-black text-white",
+        icon: TensorFLowIcon,
+    },
+    OPTITRACK: {
+        name: "Optitrack",
+        class: "bg-black text-white",
+        icon: CameraIcon,
+    }
+}
+const PROJECTS = [
+    {
+        title: "Aprendizaje autónomo de modelos de mundo y de utilidad para robots cuadrúpedos - Trabajo de Fin de Grado.",
+        description: "Desarrollo de un sistema deliberativo de toma de decisiones para un robot cuadrúpedo Unitree Go2. El sistema utiliza modelos de mundo para predecir la evolución del entorno y modelos de utilidad para seleccionar la acción más adecuada para alcanzar un objetivo. El proyecto incluyó la captura de movimiento mediante OptiTrack, la recopilación y procesamiento de datos, y el entrenamiento de redes neuronales con Python y TensorFlow.",
+        link: "#",
+        github: "https://github.com/s-lopez5/TFG_GO2",
+        image: "/projects/RobotGo2.webp",
+        tags: [TAGS.PYTHON, TAGS.TENSORFLOW, TAGS.OPTITRACK]
+    }
+]
+---
+
+{
+    PROJECTS.map(({title, description, tags, image}) => (
+        <article>
+            <h3 class="text-2xl font-semibold text-yellow-200 mb-2">
+                {title}
+            </h3>
+            <p class="text-lg mb-4 text-pretty">
+                {description}
+            </p>
+            <ul class="flex gap-x-2 flex-row mb-2">
+                {tags.map(tag => (
+                    <li>
+                        <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 items-center`}>
+                            <tag.icon class="size-5"/>
+                            {tag.name}
+                        </span>
+                        
+                    </li>
+                ))}
+            </ul>
+            <img 
+                class="rounded shadow-2xl shadow-white/10" 
+                src={image} 
+                alt={`Foto del proyecto ${title}`} />
+        </article>
+    ))
+}
