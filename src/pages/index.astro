@@ -2,78 +2,66 @@
 import Layout from '../layouts/Layout.astro';
 
 import SectionContainer from '../components/SectionContainer.astro';
-import Badge from '../components/Badge.astro';
-import SocialPill from '../components/SocialPill.astro';
+import Profile from '../components/Profile.astro'
+import TitleSection from '../components/TitleSection.astro';
 import Experience from '../components/Experience.astro';
 import Projects from '../components/Projects.astro'
 
-import LinkedinIcon from '../components/icons/Linkedin.astro';
-import GitHubIcon from '../components/icons/GitHub.astro';
-import MailIcon from '../components/icons/Mail.astro';
 import BriefCase from '../components/icons/BriefCase.astro';
 import ProjectIcon from '../components/icons/ProjectIcon.astro';
-
+import UserIcon from '../components/icons/User.astro'
 ---
 
 <Layout title="Porfolio de Santi López - Ingeniero Informático"
 	description="Ingeniero informático junior."
 >
 	<main class="px-4">
-		<SectionContainer id="sobre-mi" class="py-44 pb-32">
-			<img 
-			class="rounded-full size-12 mb-4" 
-			src="/img-perfil.webp" 
-			alt="Foto perfil" />
-			
-			<h1 class="text-white text-3xl md:text-4xl lg:text-5xl text-bold flex flex-row gap-x-4 pb-6 lg:pb-10">
-				Hola, soy Santi 
-				<a href="https://www.linkedin.com/in/santiago-lópez-silva-667056274"
-					target="_blank"
-					rel="noopener noreferrer"
-					class="flex justify-center items-center"
-				>
-					<Badge>Disponible para trabajar</Badge>
-				</a>
-			</h1>
-
-			<h2 class="text-xl lg:text-2xl text-wrap max-w-175">
-				<span>+0 años de experiencia</span>. 
-				<span class="text-yellow-200/90"> Graduado en Ingeniería Informática</span>. 
-				<span class="text-red-200/90"> De A Coruña, Galicia</span>. 
-				<span class="opacity-75"> Recién graduado y en busca de comenzar mi carrera profesional</span>.
-			</h2>
-
-			<nav class="flex gap-x-4 gap-y-2 mt-8 flex-wrap">
-				<SocialPill href="https://www.linkedin.com/in/santiago-lópez-silva-667056274">
-					<LinkedinIcon class="size:4 md:size-6" />
-					LinkedIn
-				</SocialPill>
-				<SocialPill href="https://github.com/santiiloopez">
-					<GitHubIcon class="size:4 md:size-6" />
-					GitHub
-				</SocialPill>
-				<SocialPill href="mailto:santi99lopez@gmail.com">
-					<MailIcon class="size:4 md:size-6" />
-					santi99lopez@gmail.com
-				</SocialPill>
-			</nav>
+		<SectionContainer class="py-16 md:py-36">
+			<Profile />
 		</SectionContainer>
 
-		<SectionContainer id="experiencia">
-			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
-				<BriefCase class="size-7" />
-				Experiencia laboral
-			</h2>
-			<Experience />
-		</SectionContainer>
+		<div class="space-y-24">
+			<SectionContainer id="experiencia">
+				<TitleSection>
+					<BriefCase class="size-8" />
+					Experiencia laboral
+				</TitleSection>
+			</SectionContainer>
 
-		<SectionContainer id="proyectos">
-			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
-				<ProjectIcon class="size-7" />
-				Proyectos
-			</h2>
-			<Projects />
-		</SectionContainer>
+			<SectionContainer id="proyectos">
+				<TitleSection>
+					<ProjectIcon class="size-7" />
+					Proyectos
+				</TitleSection>
+			</SectionContainer>
+
+			<SectionContainer id="sobre-mi">
+				<TitleSection>
+					<UserIcon class="size-8"/>
+					Sobre mí
+				</TitleSection>
+			</SectionContainer>
+
+			<SectionContainer id="experiencia1">
+				<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+					<BriefCase class="size-8" />
+					Experiencia laboral
+				</h2>
+				<Experience />
+			</SectionContainer>
+
+			<SectionContainer id="proyectos">
+				<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+					<ProjectIcon class="size-8" />
+					Proyectos
+				</h2>
+				<Projects />
+			</SectionContainer>
+
+			<SectionContainer id="sobre-mi">
+
+			</SectionContainer>
+		</div>
 	</main>
 	
 

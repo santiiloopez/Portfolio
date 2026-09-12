@@ -29,7 +29,7 @@ const navItems = [
     class="fixed top-0 z-10 flex justify-center items-center w-full mx-auto mt-4"
 >   
     <nav class="header-nav flex gap-x-1 px-4 py-1.5 text-sm font-medium rounded-full text-gray-600 
-        dark:text-gray-300 justify-center items-center border border-transparent"
+        dark:text-gray-300 justify-center items-center"
     >
         {
             navItems.map((navItem) => (
@@ -75,7 +75,7 @@ const navItems = [
         const observer = new IntersectionObserver(callback, {
             root:null,
             rootMargin: "0px",
-            threshold: 0-3,
+            threshold: 0.3,
         })
 
         sections.forEach((section) => {
@@ -99,24 +99,58 @@ const navItems = [
     @reference "../styles/global.css";
 
     .header-nav {
-        animation:nav-appear 1s linear both;
+        border: 1px solid transparent;
+        background: transparent;
+        box-shadow: none;
+
+        animation: header-scroll linear both;
         animation-timeline: scroll();
         animation-range: 0 100px;
     }
 
-    .header-nav {
-        @apply dark:bg-gray-900/80 bg-white/60;
+    .nav-link.text-yellow-500 {
+        font-weight: 600;
     }
 
-    .nav-link.text-yellow-500 {
-        @apply font-semibold;
-    }
-    @keyframes nav-appear {
-        0% {
-            @apply dark:bg-gray-900/0 bg-white border-transparent shadow-none;
+    /* Modo claro */
+    @keyframes header-scroll {
+        from {
+            background: transparent;
+            border-color: transparent;
+            box-shadow: none;
+            backdrop-filter: blur(0);
+            -webkit-backdrop-filter: blur(0);
         }
+
         to {
-            @apply shadow-lg ring-1 backdrop-blur-md ring-white/10 dark:ring-white/5 border-gray-200/20 dark:border-white/5;
+            background: rgba(255, 255, 255, 0.6);
+            border-color: rgba(229, 231, 235, 0.5);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    }
+
+    /* Modo oscuro */
+    :global(.dark) .header-nav {
+        animation-name: header-scroll-dark;
+    }
+
+    @keyframes header-scroll-dark {
+        from {
+            background: transparent;
+            border-color: transparent;
+            box-shadow: none;
+            backdrop-filter: blur(0);
+            -webkit-backdrop-filter: blur(0);
+        }
+
+        to {
+            background: rgba(17, 24, 39, 0.8);
+            border-color: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
         }
     }
 </style>
