@@ -1,0 +1,147 @@
+{
+    "basics": {
+        "name": "Santiago López Silva",
+        "label": "Ingeniero Informático",
+        "image": "/img-perfil.webp",
+        "email": "santi99lopez@gmail.com",
+        "phone": "655355269",
+        "url": "",
+        "summary": "<strong>Ingeniero Informático. </strong> De A Coruña, Galicia. Recién graduado en Ingeniería Informática en la <strong>UDC</strong> y en busca de comenzar mi carrera profesional.",
+        "location": {
+            "address": "",
+            "postalCode": "15009",
+            "city": "A Coruña",
+            "countryCode": "ES",
+            "region": "España"
+        },
+        "profiles": [
+            {
+                "network": "GitHub",
+                "username": "santiiloopez",
+                "url": "https://github.com/santiiloopez"
+            },
+            {
+                "network": "LinkedIn",
+                "username": "Santiago López Silva",
+                "url": "https://www.linkedin.com/in/santiago-lópez-silva-667056274"
+            }
+        ]
+    },
+    "work": [
+        {
+            "name": "CSAR Visual Studio",
+            "position": "Practicas en empresa",
+            "url": "",
+            "startDate": "2024-07-01",
+            "endDate": "2024-09-01",
+            "summary": "Montaje de un sistema NAS, configuración de la infraestructura de red de la empresa y asesoría en seguridad informática.",
+            "highlights": [
+                ""
+            ]
+        }
+    ],
+    "volunteer": [
+        {
+            "organization": "Organization",
+            "position": "Volunteer",
+            "url": "https://organization.com/",
+            "startDate": "2012-01-01",
+            "endDate": "2013-01-01",
+            "summary": "Description…",
+            "highlights": [
+                "Awarded 'Volunteer of the Month'"
+            ]
+        }
+    ],
+    "education": [
+        {
+            "institution": "Universidad de La Coruña",
+            "url": "https://www.udc.gal/",
+            "area": "Ingeniería Informática",
+            "studyType": "Grado",
+            "startDate": "2019-09-10",
+            "endDate": "2026-06-25",
+            "score": "6.2",
+            "courses": [
+                ""
+            ]
+        }
+    ],
+    "awards": [
+        {
+            "title": "Award",
+            "date": "2014-11-01",
+            "awarder": "Company",
+            "summary": "There is no spoon."
+        }
+    ],
+    "certificates": [
+        {
+            "name": "Certificate",
+            "date": "2021-11-07",
+            "issuer": "Company",
+            "url": "https://certificate.com"
+        }
+    ],
+    "publications": [
+        {
+            "name": "Publication",
+            "publisher": "Company",
+            "releaseDate": "2014-10-01",
+            "url": "https://publication.com",
+            "summary": "Description…"
+        }
+    ],
+    "skills": [
+        {
+            "name": "Web Development",
+            "level": "Master",
+            "keywords": [
+                "HTML",
+                "CSS",
+                "JavaScript"
+            ]
+        }
+    ],
+    "languages": [
+        {
+            "language": "Español",
+            "fluency": "Nativo"
+        },
+        {
+            "language": "Gallego",
+            "fluency": "Nativo"
+        },
+        {
+            "language": "Inglés",
+            "fluency": "Profesional"
+        }
+    ],
+    "interests": [
+        {
+            "name": "Wildlife",
+            "keywords": [
+                "Ferrets",
+                "Unicorns"
+            ]
+        }
+    ],
+    "references": [
+        {
+            "name": "Jane Doe",
+            "reference": "Reference…"
+        }
+    ],
+    "projects": [
+        {
+            "name": "Project",
+            "startDate": "2019-01-01",
+            "endDate": "2021-01-01",
+            "description": "Description...",
+            "highlights": [
+                "Won award at AIHacks 2016"
+            ],
+            "url": "https://project.com/"
+        }
+    ]
+}
