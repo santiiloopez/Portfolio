@@ -10,17 +10,13 @@ import Projects from '../components/Projects.astro'
 import BriefCase from '../components/icons/BriefCase.astro';
 import ProjectIcon from '../components/icons/ProjectIcon.astro';
 import UserIcon from '../components/icons/User.astro'
-
-import { basics } from '@cv'
-
-const { name, label } = basics
 ---
 
 <Layout title="Porfolio de Santi López - Ingeniero Informático"
 	description="Ingeniero informático junior."
 >
 	<main class="px-4">
-		<SectionContainer class="py-16 md:py-36">
+		<SectionContainer id="inicio" class="py-16 md:py-36">
 			<Profile />
 		</SectionContainer>
 
@@ -30,6 +26,7 @@ const { name, label } = basics
 					<BriefCase class="size-8" />
 					Experiencia laboral
 				</TitleSection>
+				<Experience />
 			</SectionContainer>
 
 			<SectionContainer id="proyectos">
@@ -37,6 +34,7 @@ const { name, label } = basics
 					<ProjectIcon class="size-7" />
 					Proyectos
 				</TitleSection>
+				<Projects />
 			</SectionContainer>
 
 			<SectionContainer id="sobre-mi">
@@ -44,29 +42,8 @@ const { name, label } = basics
 					<UserIcon class="size-8"/>
 					Sobre mí
 				</TitleSection>
-			</SectionContainer>
-
-			<SectionContainer id="experiencia1">
-				<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
-					<BriefCase class="size-8" />
-					Experiencia laboral
-				</h2>
-				<Experience />
-			</SectionContainer>
-
-			<SectionContainer id="proyectos">
-				<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
-					<ProjectIcon class="size-8" />
-					Proyectos
-				</h2>
-				<Projects />
-			</SectionContainer>
-
-			<SectionContainer id="sobre-mi">
 
 			</SectionContainer>
 		</div>
 	</main>
-	
-
 </Layout>

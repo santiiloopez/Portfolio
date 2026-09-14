@@ -2,60 +2,134 @@
 import PythonIcon from './icons/Python.astro'
 import TensorFLowIcon from './icons/TensorFlow.astro'
 import CameraIcon from './icons/Camera.astro'
+import TailwindIcon from './icons/TailwindIcon.astro'
+import JavascriptIcon from './icons/JavascriptIcon.astro'
+import HTMLIcon from './icons/HTMLIcon.astro'
+import CSSIcon from './icons/CSSIcon.astro'
+import AstroIcon from './icons/AstroIcon.astro'
+import GitHubIcon from './icons/GitHub.astro'
+import ExternalLinkIcon from './icons/ExternalLink.astro'
 
-const TAGS = {
+import LinkButton from './LinkButton.astro'
+
+import { projects } from '@cv'
+
+
+const TAGS: Record<string, {name: string, class: string, icon: any}> = {
+    TAILWIND: {
+        name: "Tailwind CSS",
+        class: "bg-[#003159] text-white",
+        icon: TailwindIcon,
+    },
     PYTHON: {
         name: "Python",
-        class: "bg-black text-white",
+        class: "bg-[#FFF4CC] text-[#3776AB] dark:bg-[#1E293B] dark:text-[#FFD43B]",
         icon: PythonIcon,
     },
     TENSORFLOW: {
         name: "TensorFLow",
-        class: "bg-black text-white",
+        class: "bg-[#FFF0E6] text-[#FF6F00] dark:bg-[#2A1A0D] dark:text-[#FF8C00]",
         icon: TensorFLowIcon,
     },
-    OPTITRACK: {
-        name: "Optitrack",
-        class: "bg-black text-white",
-        icon: CameraIcon,
-    }
+    ASTRO: {
+        name: "Astro",
+        class: "bg-[#FFE4E6] text-[#FF5D01] dark:bg-[#2A1518] dark:text-[#FF7A3D]",
+        icon: AstroIcon,
+    },
+    HTML: {
+        name: "HTML",
+        class: "bg-[#FFF0EB] text-[#E34F26] dark:bg-[#2A1712] dark:text-[#FF6B3D]",
+        icon: HTMLIcon,
+    },
+    CSS: {
+        name: "CSS",
+        class: "bg-[#EAF2FF] text-[#1572B6] dark:bg-[#10233A] dark:text-[#38A8E8]",
+        icon: CSSIcon,
+    },
+    JAVASCRIPT: {
+        name: "Javascript",
+        class: "bg-[#FFF9CC] text-[#B89B00] dark:bg-[#2A260D] dark:text-[#F7DF1E]",
+        icon: JavascriptIcon,
+    },
 }
-const PROJECTS = [
-    {
-        title: "Aprendizaje autónomo de modelos de mundo y de utilidad para robots cuadrúpedos - Trabajo de Fin de Grado.",
-        description: "Desarrollo de un sistema deliberativo de toma de decisiones para un robot cuadrúpedo Unitree Go2. El sistema utiliza modelos de mundo para predecir la evolución del entorno y modelos de utilidad para seleccionar la acción más adecuada para alcanzar un objetivo. El proyecto incluyó la captura de movimiento mediante OptiTrack, la recopilación y procesamiento de datos, y el entrenamiento de redes neuronales con Python y TensorFlow.",
-        link: "#",
-        github: "https://github.com/s-lopez5/TFG_GO2",
-        image: "/projects/RobotGo2.webp",
-        tags: [TAGS.PYTHON, TAGS.TENSORFLOW, TAGS.OPTITRACK]
-    }
-]
+const PROJECTS = projects.map((project) => ({
+    ...project,
+    tags: project.tags.map((key) => TAGS[key]),
+}))
 ---
 
-{
-    PROJECTS.map(({title, description, tags, image}) => (
-        <article>
-            <h3 class="text-2xl font-semibold text-yellow-200 mb-2">
-                {title}
-            </h3>
-            <p class="text-lg mb-4 text-pretty">
-                {description}
-            </p>
-            <ul class="flex gap-x-2 flex-row mb-2">
-                {tags.map(tag => (
-                    <li>
-                        <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 items-center`}>
-                            <tag.icon class="size-5"/>
-                            {tag.name}
-                        </span>
-                        
-                    </li>
-                ))}
-            </ul>
-            <img 
-                class="rounded shadow-2xl shadow-white/10" 
-                src={image} 
-                alt={`Foto del proyecto ${title}`} />
-        </article>
-    ))
-}
+<div class="flex flex-col gap-y-16">
+    {
+        PROJECTS.map(({image, name, description, tags, url, github}) => (
+            <article 
+                class="flex flex-col space-x-0 space-y-6 group md:flex-row 
+                md:space-x-10 md:space-y-0"
+            >
+                <div class="w-full md:w-1/2">
+                    <div 
+                        class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 
+                        transition-all duration-500 ease-in-out transform shadow-xl overflow-clip
+                        rounded-xl sm:rounded-xl  md:group-hover:-translate-y-1 
+                        md:group-hover:shadow-[0_20px_60px_-10px_rgba(251,191,36,0.2)] lg:border 
+                        lg:border-gray-800 lg:hover:border-yellow-400/30 lg:hover:bg-gray-800/50"
+                    >
+                        <img 
+                            alt={name}
+                            class="object-cover object-top w-full h-56 transition duration-500 sm:h-full
+                            md:scale-110 md:group-hover:scale-105"
+                            loading="lazy"
+                            src={image}
+                        />
+                        <div
+                            class="absolute inset-0 bg-linear-to-t from-black/40 via-transparent 
+                            to-transparent opacity-0 group-hover:opacity-100 transition-opacity 
+                            duration-500 pointer-events-none"
+                            aria-hidden="true"
+                        >
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full md:w-1/2 md:max-w-lg flex flex-col justify-center">
+                    <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
+                        {name}
+                    </h3>
+
+                    <ul class="flex flex-row flex-wrap mt-3 gap-2">
+                        {tags.map((tag) => (
+                            <li>
+                                <span
+                                    class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 items-center`}
+                                >
+                                    <tag.icon class="size-5" />
+                                    {tag.name}
+                                </span>
+                            </li>
+                        ))}
+                    </ul>
+
+                    <p class="mt-3 text-gray-700 dark:text-gray-400 text-pretty">
+                        {description}
+                    </p>
+
+                    <footer class="flex items-center mt-4 gap-x-4">
+                        {github && (
+                            <LinkButton href={github}>
+                                <GitHubIcon />
+                                Code
+                            </LinkButton>
+                            
+                        )}
+                        {url && (
+                            <LinkButton href={url}>
+                                <ExternalLinkIcon />
+                                Preview
+                            </LinkButton>
+                            
+                        )}
+                    </footer>
+                </div>
+            </article>
+        ))
+    }
+</div>

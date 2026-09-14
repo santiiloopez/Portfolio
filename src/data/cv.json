@@ -16,6 +16,11 @@
         },
         "profiles": [
             {
+                "network": "Gmail",
+                "username": "santi99lopez@gmail.com",
+                "url": ""
+            },
+            {
                 "network": "GitHub",
                 "username": "santiiloopez",
                 "url": "https://github.com/santiiloopez"
@@ -32,19 +37,16 @@
             "name": "CSAR Visual Studio",
             "position": "Practicas en empresa",
             "url": "",
-            "startDate": "2024-07-01",
-            "endDate": "2024-09-01",
-            "summary": "Montaje de un sistema NAS, configuración de la infraestructura de red de la empresa y asesoría en seguridad informática.",
-            "highlights": [
-                ""
-            ]
+            "startDate": "2024/07",
+            "endDate": "2024/09",
+            "summary": "Montaje de un sistema NAS, configuración de la infraestructura de red de la empresa y asesoría en seguridad informática."
         }
     ],
     "volunteer": [
         {
             "organization": "Organization",
             "position": "Volunteer",
-            "url": "https://organization.com/",
+            "url": "",
             "startDate": "2012-01-01",
             "endDate": "2013-01-01",
             "summary": "Description…",
@@ -80,7 +82,7 @@
             "name": "Certificate",
             "date": "2021-11-07",
             "issuer": "Company",
-            "url": "https://certificate.com"
+            "url": ""
         }
     ],
     "publications": [
@@ -88,18 +90,65 @@
             "name": "Publication",
             "publisher": "Company",
             "releaseDate": "2014-10-01",
-            "url": "https://publication.com",
+            "url": "",
             "summary": "Description…"
         }
     ],
     "skills": [
         {
-            "name": "Web Development",
+            "name": "Python",
+            "level": "Avanzado",
+            "keywords": [
+                "Machine Learning", "Procesamiento de Datos", "TensorFlow"
+            ]
+        },
+        {
+            "name": "HTML",
             "level": "Master",
             "keywords": [
-                "HTML",
-                "CSS",
-                "JavaScript"
+                "Desarrollo Web", "Frontend"
+            ]
+        },
+        {
+            "name": "CSS",
+            "level": "Master",
+            "keywords": [
+                "Desarrollo Web", "Frontend", "Diseño Responsive"
+            ]
+        },
+        {
+            "name": "JavaScript",
+            "level": "Master",
+            "keywords": [
+                "Desarrollo Web", "Frontend", "Backend", "Fullstack"
+            ]
+        },
+        {
+            "name": "Tailwind",
+            "level": "Avanzado",
+            "keywords": [
+                "Desarrollo Web", "Frontend", "CSS Framework", "Diseño Responsive"
+            ]
+        },
+        {
+            "name": "Git",
+            "level": "Avanzado",
+            "keywords": [
+                "Control de Versiones", "Colaboración", "Código Fuente"
+            ]
+        },
+        {
+            "name": "GitHub",
+            "level": "Avanzado",
+            "keywords": [
+                "Control de Versiones", "Colaboración", "Código Fuente", "Git"
+            ]
+        },
+        {
+            "name": "MySQL",
+            "level": "Medio",
+            "keywords": [
+                "Bases de Datos", "SQL", "Almacenamiento de Datos", "Backend"
             ]
         }
     ],
@@ -119,29 +168,49 @@
     ],
     "interests": [
         {
-            "name": "Wildlife",
+            "name": "Videojuegos",
             "keywords": [
-                "Ferrets",
-                "Unicorns"
+                "PC"
             ]
         }
     ],
     "references": [
         {
-            "name": "Jane Doe",
-            "reference": "Reference…"
+            "name": "",
+            "reference": ""
         }
     ],
     "projects": [
         {
-            "name": "Project",
-            "startDate": "2019-01-01",
-            "endDate": "2021-01-01",
-            "description": "Description...",
+            "name": "Aprendizaje autónomo de modelos de mundo y de utilidad para robots cuadrúpedos - Trabajo de Fin de Grado",
+            "startDate": "2025-06-01",
+            "endDate": "2026-06-01",
+            "description": "Desarrollo de un sistema deliberativo para un robot cuadrúpedo Unitree Go2, basado en modelos de mundo y utilidad para predecir estados y seleccionar acciones. Incluyó captura de movimiento con OptiTrack, procesamiento de datos y entrenamiento de redes neuronales con Python y TensorFlow.",
+            "image": "/projects/RobotGo2.webp",
             "highlights": [
-                "Won award at AIHacks 2016"
+                "TFG", "Machine Learning", "Robótica", "Optitrack"
             ],
-            "url": "https://project.com/"
+            "tags": [
+                "PYTHON", "TENSORFLOW"
+            ],
+            "github": "https://github.com/santiiloopez/TFG"
+        },
+        {
+            "name": "Porfolio de Santiago López Silva",
+            "isActive": true,
+            "startDate": "2026-09-01",
+            "endDate": "2026-09-01",
+            "description": "Porfolio personal de Santiago López Silva, creado con Astro y que utliza el esquema del JSON de CV de jsonresume.org",
+            "image": "/projects/RobotGo2.webp",
+            "highlights": [
+                "Porfolio"
+            ],
+            "tags": [
+                "ASTRO", "HTML", "CSS", "TAILWIND", "JAVASCRIPT"
+            ],
+            "url": "asdfaewafsdf",
+            "github": "https://github.com/santiiloopez/Portfolio"
         }
     ]
 }
+
