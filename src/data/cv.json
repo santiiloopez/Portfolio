@@ -201,7 +201,7 @@
             "startDate": "2026-09-01",
             "endDate": "2026-09-01",
             "description": "Porfolio personal de Santiago López Silva, creado con Astro y que utliza el esquema del JSON de CV de jsonresume.org",
-            "image": "/projects/RobotGo2.webp",
+            "image": "/projects/img_porfolio.webp",
             "highlights": [
                 "Porfolio"
             ],
